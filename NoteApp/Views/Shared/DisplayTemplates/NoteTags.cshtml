@@ -1,0 +1,8 @@
+﻿@model string
+@if (Model != null)
+{
+    foreach (var tag in Model.Split(','))
+    {
+        <span class="label label-info">@tag.Trim()</span>
+    }
+}

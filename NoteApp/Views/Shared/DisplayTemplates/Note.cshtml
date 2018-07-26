@@ -1,0 +1,18 @@
+﻿@model NoteApp.Models.Note
+<tr>
+    <td>
+        <a href="@Url.Action("Details", new { noteId = Model.Id })" class="note">@Html.DisplayFor(model => model.Title, "NoteTitle")</a>
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.CreationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.ChangeDate)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Tags, "NoteTags")
+    </td>
+    <td>
+        <span class="badge">@Model.Files.Count</span>
+    </td>
+</tr>
