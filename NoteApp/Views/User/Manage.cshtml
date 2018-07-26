@@ -4,19 +4,29 @@
     ViewBag.Title = "Управление пользователями";
 }
 <h2>@ViewBag.Title</h2>
-<hr />
+<p>
+    @Html.ActionLink("Добавить пользователя", "Create")
+</p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>@Html.SortLink("ID", "Id")</th>
-            <th>@Html.SortLink("Имя пользователя", "UserName")</th>
-            <th>@Html.SortLink("Дата регистрации", "RegistrationDate")</th>
-            <th>@Html.SortLink("Статус", "IsEnabled")</th>
-            <th>@Html.SortLink("Роли", "Roles")</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @Html.DisplayFor(model => model.Users)
-    </tbody>
-</table>
+    <tr>
+        <th>
+            @Html.SortLink("Логин", "UserName")
+        </th>
+        <th></th>
+    </tr>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.SortLink("ID", "Id")</th>
+                <th>@Html.SortLink("Имя пользователя", "UserName")</th>
+                <th>@Html.SortLink("Дата регистрации", "RegistrationDate")</th>
+                <th>@Html.SortLink("Статус", "IsEnabled")</th>
+                <th>@Html.SortLink("Роли", "Roles")</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.DisplayFor(model => model.Users)
+        </tbody>
+    </table>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using NoteApp.Models;
 using NoteApp.Models.Repositories;
 
@@ -37,6 +38,28 @@ namespace NoteApp.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Create()
+        {
+            var model = new UserViewModel { Entity = new User() };
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public ActionResult Create(UserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var res = UserManager.CreateAsync(model.Entity, model.Password);
+                if (res.Result == IdentityResult.Success)
+                {
+                    return RedirectToAction("Manage");
+                }
+            }
+            return View(model);
         }
     }
 }

@@ -201,12 +201,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityViewModel.cs" />
     <Compile Include="Models\NoteEditViewModel.cs" />
     <Compile Include="Models\NoteListViewModel.cs" />
     <Compile Include="Models\SigninViewModel.cs" />
     <Compile Include="Models\SignupViewModel.cs" />
     <Compile Include="Models\SortLinkModel.cs" />
     <Compile Include="Models\UserListViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Permissions\RoleManager.cs" />
     <Compile Include="Permissions\RoleStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -312,6 +314,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Views\User\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
