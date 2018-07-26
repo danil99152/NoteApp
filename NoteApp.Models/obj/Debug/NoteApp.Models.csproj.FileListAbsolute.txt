@@ -1,11 +1,8 @@
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\NoteApp.Models.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\NoteApp.Models.pdb
-C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\FluentNHibernate.dll
-C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Owin.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Web.XmlTransform.dll
-C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\NHibernate.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Owin.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\FluentNHibernate.xml
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
