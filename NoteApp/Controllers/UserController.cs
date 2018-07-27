@@ -61,5 +61,13 @@ namespace NoteApp.Controllers
             }
             return View(model);
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Delete(long Id)
+        {
+            var user = userRepository.Load(Id);
+            userRepository.Delete(user);
+            return RedirectToAction("Manage");
+        }
     }
 }

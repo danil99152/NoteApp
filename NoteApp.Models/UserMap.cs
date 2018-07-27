@@ -12,7 +12,7 @@ namespace NoteApp.Models
         public UserMap()
         {
             Id(u => u.Id).GeneratedBy.Identity();
-            Map(u => u.UserName).Length(32);
+            Map(u => u.UserName).Length(30);
             Map(u => u.RegistrationDate);
             Map(u => u.Password).Column("PasswordHash");
             HasMany(u => u.Notes).KeyColumn("User_id");

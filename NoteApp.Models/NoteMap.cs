@@ -12,11 +12,11 @@ namespace NoteApp.Models
         public NoteMap()
         {
             Id(n => n.Id).GeneratedBy.Identity();
-            Map(n => n.Title).Length(64);
-            Map(n => n.Text).Length(4001);
+            Map(n => n.Title).Length(30);
+            Map(n => n.Text).Length(int.MaxValue);
             Map(n => n.ChangeDate);
             Map(n => n.CreationDate);
-            Map(n => n.Tags).Length(255);
+            Map(n => n.Tags);
             References(n => n.Author).Column("User_id");
             HasMany(n => n.Files).KeyColumn("Note_id").Cascade.All();
         }
