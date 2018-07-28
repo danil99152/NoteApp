@@ -16,7 +16,6 @@
         @Html.DisplayFor(model => model.Tags, "NoteTags")
     </div>
     <div class="modal-footer">
-        <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Изменить</a>
         <a href="@Url.Action("Delete", new { noteId = Model.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Удалить</a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
     </div>

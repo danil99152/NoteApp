@@ -12,7 +12,7 @@ namespace NoteApp.Models
         public BinaryFileMap()
         {
             Id(f => f.Id).GeneratedBy.Identity();
-            Map(f => f.Name).Length(64);
+            Map(f => f.Name).Length(100);
             Map(f => f.Path).Length(255);
             References(f => f.Note).Column("Note_id");
         }

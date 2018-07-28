@@ -12,7 +12,7 @@ namespace NoteApp.Models
         public RoleMap()
         {
             Id(r => r.Id).GeneratedBy.Identity();
-            Map(r => r.Name).Length(32);
+            Map(r => r.Name).Length(30);
             HasManyToMany(r => r.Users)
                 .ParentKeyColumn("Role_id")
                 .ChildKeyColumn("User_id");

@@ -12,7 +12,7 @@ namespace NoteApp.Models
         public TagMap()
         {
             Id(t => t.Id).GeneratedBy.Identity();
-            Map(t => t.Name).Length(16).Unique();
+            Map(t => t.Name).Length(30).Unique();
 
         }
     }
