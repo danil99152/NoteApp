@@ -37,7 +37,7 @@ namespace NoteApp.App_Start
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            var connectionString = ConfigurationManager.ConnectionStrings["NoteApp"];
+            var connectionString = ConfigurationManager.ConnectionStrings["MSSQL"];
             if (connectionString == null)
             {
                 throw new Exception("Не найдена строка соединения");

@@ -11,7 +11,12 @@
             </div>
         </div>
         <ul class="list-group">
-            @Html.DisplayFor(model => model.Files)
+           @foreach (var temp in Model.Files)
+           {
+            <tr>
+                <a href="@Url.Action("Download", new { filePath = temp.Path, fileName = temp.Name })" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-cloud-download"> Скачать</span></a>
+            </tr>
+           }
         </ul>
         @Html.DisplayFor(model => model.Tags, "NoteTags")
     </div>

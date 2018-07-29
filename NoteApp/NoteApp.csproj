@@ -194,10 +194,14 @@
     <Compile Include="Auth\UserManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BinaryFileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Files\BinaryFileModelBinder.cs" />
+    <Compile Include="Files\IFileProvider.cs" />
+    <Compile Include="Files\StreamHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,10 +218,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\NoteApp.mdf" />
-    <Content Include="App_Data\NoteApp_log.ldf">
-      <DependentUpon>NoteApp.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-tagsinput.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -293,7 +293,6 @@
     <Content Include="Views\Note\Details.cshtml" />
     <Content Include="Views\Note\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\File.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Note.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\NoteTags.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\NoteText.cshtml" />
@@ -338,6 +337,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

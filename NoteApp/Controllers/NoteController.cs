@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NoteApp.Files;
 using NoteApp.Models;
 using NoteApp.Models.Repositories;
 
@@ -14,7 +15,8 @@ namespace NoteApp.Controllers
     {
         private readonly NoteRepository noteRepository;
 
-        public NoteController(NoteRepository noteRepository, UserRepository userRepository) : base(userRepository)
+        public NoteController(NoteRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
+            base(userRepository, fileProviders)
         {
             this.noteRepository = noteRepository;
         }
@@ -29,7 +31,7 @@ namespace NoteApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var files = new List<Models.BinaryFile>();
+                var files = new List<BinaryFile>();
                 string serverPath = Server.MapPath($"~/Uploaded Files/{ User.Identity.Name }/");
                 if (!Directory.Exists(serverPath))
                 {
@@ -42,7 +44,7 @@ namespace NoteApp.Controllers
                         string fileName = Path.GetFileName(file.FileName);
                         string filePath = Path.Combine(serverPath, fileName);
                         file.SaveAs(filePath);
-                        files.Add(new Models.BinaryFile(fileName, filePath));
+                        files.Add(new BinaryFile(fileName, filePath));
                     }
                 }
                 var user = userRepository.GetCurrentUser(User);

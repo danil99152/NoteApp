@@ -14,6 +14,7 @@ namespace NoteApp.Models
             Id(f => f.Id).GeneratedBy.Identity();
             Map(f => f.Name).Length(100);
             Map(f => f.Path).Length(255);
+            Map(f => f.ContentType);
             References(f => f.Note).Column("Note_id");
         }
     }

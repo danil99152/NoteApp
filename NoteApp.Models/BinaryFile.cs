@@ -16,6 +16,8 @@ namespace NoteApp.Models
 
         public virtual Note Note { get; set; }
 
+        public virtual string ContentType { get; set; }
+
         public BinaryFile()
         {
 

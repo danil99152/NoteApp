@@ -71,9 +71,8 @@
     <Compile Include="Listeners\PreUpdateNoteEventListener.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="NoteMap.cs" />
-    <Compile Include="Photo.cs" />
-    <Compile Include="PhotoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BinaryFileRepository.cs" />
     <Compile Include="Repositories\NoteRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RepositoryAttribute.cs" />

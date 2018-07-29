@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using NoteApp.Files;
 using NoteApp.Models;
 using NoteApp.Models.Repositories;
 
@@ -12,7 +13,8 @@ namespace NoteApp.Controllers
     [Authorize]
     public class UserController : BaseController
     {
-        public UserController(UserRepository userRepository) : base(userRepository)
+        public UserController(UserRepository userRepository, IFileProvider[] fileProviders) : 
+            base(userRepository, fileProviders)
         {
         }
 
