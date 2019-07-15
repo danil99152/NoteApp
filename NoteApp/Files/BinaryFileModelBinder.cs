@@ -22,10 +22,9 @@ namespace NoteApp.Files
             {
                 return null;
             }
-            return new BinaryFile
+            return new Resume
             {
-                Name = postedFile.FileName,
-                ContentType = postedFile.ContentType,
+                PhotoPath = postedFile.FileName + postedFile.ContentType
             };
         }
     }

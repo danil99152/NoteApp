@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NoteApp.Models
 {
-    public class Tag
+    public class Requirment
     {
         public virtual long Id { get; set; }
 

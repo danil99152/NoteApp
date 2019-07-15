@@ -13,9 +13,9 @@ namespace NoteApp.Controllers
     [Authorize]
     public class NoteController : BaseController
     {
-        private readonly NoteRepository noteRepository;
+        private readonly ResumeRepository noteRepository;
 
-        public NoteController(NoteRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
+        public NoteController(ResumeRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
             base(userRepository, fileProviders)
         {
             this.noteRepository = noteRepository;
@@ -48,12 +48,12 @@ namespace NoteApp.Controllers
                     }
                 }
                 var user = userRepository.GetCurrentUser(User);
-                var note = new Note
+                var note = new Resume
                 {
                     Title = model.Title,
-                    Text = model.Text,
+                    PastPlaces = model.Text,
                     Tags = model.Tags,
-                    Author = user,
+                    FIO = user,
                     Files = files
                 };
                 noteRepository.Save(note);
@@ -78,7 +78,7 @@ namespace NoteApp.Controllers
         {
             var note = noteRepository.Load(noteId);
             var user = userRepository.GetCurrentUser(User);
-            if (user.Equals(note.Author))
+            if (user.Equals(note.FIO))
             {
                 return PartialView("Details", note);
             }

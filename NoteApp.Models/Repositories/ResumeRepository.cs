@@ -10,20 +10,20 @@ using NHibernate.Criterion;
 namespace NoteApp.Models.Repositories
 {
     [Repository]
-    public class NoteRepository : Repository<Note>
+    public class ResumeRepository : Repository<Resume>
     {
-        public NoteRepository(ISession session) : base(session)
+        public ResumeRepository(ISession session) : base(session)
         {
         }
 
-        public IList<Note> GetAllByUser(User user, FetchOptions options = null)
+        public IList<Resume> GetAllByUser(User user, FetchOptions options = null)
         {
-            var crit = session.CreateCriteria<Note>().Add(Restrictions.Eq("Author", user));
+            var crit = session.CreateCriteria<Resume>().Add(Restrictions.Eq("FIO", user));
             if (options != null)
             {
                 SetFetchOptions(crit, options);
             }
-            return crit.List<Note>();
+            return crit.List<Resume>();
         }
     }
 }

@@ -7,11 +7,11 @@ namespace NoteApp.Models
 {
     public class NoteListViewModel
     {
-        public ICollection<Note> Notes { get; set; }
+        public ICollection<Resume> Notes { get; set; }
 
         public NoteListViewModel()
         {
-            Notes = new List<Note>();
+            Notes = new List<Resume>();
         }
     }
 }

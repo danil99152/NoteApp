@@ -24,9 +24,9 @@ namespace NoteApp.Models.Listeners
 
         private bool SetCreationProps(PreInsertEvent @event)
         {
-            if (@event.Entity is Note note)
+            if (@event.Entity is Resume note)
             {
-                note.CreationDate = DateTime.Now;
+                note.Birthday = DateTime.Now;
                 note.ChangeDate = DateTime.Now;
             }
             else if (@event.Entity is User user)

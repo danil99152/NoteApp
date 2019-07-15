@@ -13,9 +13,8 @@ namespace NoteApp.Models
         {
             Id(u => u.Id).GeneratedBy.Identity();
             Map(u => u.UserName).Length(30);
-            Map(u => u.RegistrationDate);
             Map(u => u.Password).Column("PasswordHash");
-            HasMany(u => u.Notes).KeyColumn("User_id");
+            HasMany(u => u.Resumes).KeyColumn("User_id");
             HasManyToMany(u => u.Roles)
                 .ParentKeyColumn("User_id")
                 .ChildKeyColumn("Role_id");

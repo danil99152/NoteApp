@@ -12,25 +12,22 @@ namespace NoteApp.Models
     {
         public virtual long Id { get; set; }
 
-        [Display(Name = "Логин")]
+        [Display(Name = "ФИО")]
         public virtual string UserName { get; set; }
 
         public virtual string Password { get; set; }
 
-        [Display(Name = "Дата начала работы")]
-        public virtual DateTime RegistrationDate { get; set; }
-
         public virtual ICollection<Role> Roles { get; set; }
 
         [Display(Name = "Заметки")]
-        public virtual ICollection<Note> Notes { get; set; }
+        public virtual ICollection<Resume> Resumes { get; set; }
 
         public virtual bool IsEnabled { get; set; } = true;
 
         public User()
         {
             Roles = new List<Role>();
-            Notes = new List<Note>();
+            Resumes = new List<Resume>();
         }
 
         public User(string userName) : this()

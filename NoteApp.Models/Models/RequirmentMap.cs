@@ -7,9 +7,9 @@ using FluentNHibernate.Mapping;
 
 namespace NoteApp.Models
 {
-    public class TagMap : ClassMap<Tag>
+    public class RequirmentMap : ClassMap<Requirment>
     {
-        public TagMap()
+        public RequirmentMap()
         {
             Id(t => t.Id).GeneratedBy.Identity();
             Map(t => t.Name).Length(30).Unique();

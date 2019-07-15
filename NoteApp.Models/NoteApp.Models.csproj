@@ -63,26 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryFile.cs" />
-    <Compile Include="BinaryFileMap.cs" />
     <Compile Include="FetchOptions.cs" />
     <Compile Include="Listeners\ListenerAttribute.cs" />
     <Compile Include="Listeners\PreInsertNoteEventListener.cs" />
     <Compile Include="Listeners\PreUpdateNoteEventListener.cs" />
-    <Compile Include="Note.cs" />
-    <Compile Include="NoteMap.cs" />
+    <Compile Include="Models\Resume.cs" />
+    <Compile Include="Models\ResumeMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BinaryFileRepository.cs" />
-    <Compile Include="Repositories\NoteRepository.cs" />
+    <Compile Include="Repositories\ResumeRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RepositoryAttribute.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="RoleMap.cs" />
-    <Compile Include="Tag.cs" />
-    <Compile Include="TagMap.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserMap.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleMap.cs" />
+    <Compile Include="Models\Requirment.cs" />
+    <Compile Include="Models\RequirmentMap.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
