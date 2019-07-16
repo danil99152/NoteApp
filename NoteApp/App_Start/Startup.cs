@@ -32,6 +32,7 @@ namespace NoteApp.App_Start
 {
     public partial class Startup
     {
+        [Obsolete]
         public static void Configuration(IAppBuilder app)
         {
             AreaRegistration.RegisterAllAreas();
@@ -119,17 +120,20 @@ namespace NoteApp.App_Start
             using (ISession session = sessionFactory.OpenSession())
             {
                 var roleAdmin = new Role("Admin");
-                var roleUser = new Role("User");
+                var roleCandidate = new Role("Candidate");
+                var roleEmployer = new Role("Employer");
                 var roleManager = new RoleManager(new RoleStore(session));
                 var userManager = new UserManager(new IdentityStore(session));
-                roleManager.CreateAsync(roleUser);
+                roleManager.CreateAsync(roleCandidate);
+                roleManager.CreateAsync(roleEmployer);
                 roleManager.CreateAsync(roleAdmin);                                 //Аккаунт admin:
                 var userAdmin = new User("root");                                  //Логин: root;
                 var result = userManager.CreateAsync(userAdmin, "toor");           //Пароль: toor; 
                 if (result.Result.Succeeded)
                 {
                     userManager.AddToRoleAsync(userAdmin.Id, roleAdmin.Name);
-                    userManager.AddToRoleAsync(userAdmin.Id, roleUser.Name);
+                    userManager.AddToRoleAsync(userAdmin.Id, roleCandidate.Name);
+                    userManager.AddToRoleAsync(userAdmin.Id, roleEmployer.Name);
                 }
             }
         }

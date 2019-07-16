@@ -196,7 +196,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BinaryFileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NoteController.cs" />
+    <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Files\BinaryFileModelBinder.cs" />
@@ -206,8 +206,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityViewModel.cs" />
-    <Compile Include="Models\NoteEditViewModel.cs" />
-    <Compile Include="Models\NoteListViewModel.cs" />
+    <Compile Include="Models\ResumeEditViewModel.cs" />
+    <Compile Include="Models\ResumeListViewModel.cs" />
     <Compile Include="Models\SigninViewModel.cs" />
     <Compile Include="Models\SignupViewModel.cs" />
     <Compile Include="Models\SortLinkModel.cs" />

@@ -11,14 +11,14 @@ using NoteApp.Models.Repositories;
 namespace NoteApp.Controllers
 {
     [Authorize]
-    public class NoteController : BaseController
+    public class ResumeController : BaseController
     {
-        private readonly ResumeRepository noteRepository;
+        private readonly ResumeRepository resumeRepository;
 
-        public NoteController(ResumeRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
+        public ResumeController(ResumeRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
             base(userRepository, fileProviders)
         {
-            this.noteRepository = noteRepository;
+            this.resumeRepository = noteRepository;
         }
 
         public ActionResult Create()
@@ -27,36 +27,33 @@ namespace NoteApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(NoteEditViewModel model)
+        public ActionResult Create(ResumeEditViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var files = new List<BinaryFile>();
+                var files = new BinaryFile();
                 string serverPath = Server.MapPath($"~/Uploaded Files/{ User.Identity.Name }/");
                 if (!Directory.Exists(serverPath))
                 {
                     Directory.CreateDirectory(serverPath);
                 }
-                foreach (var file in model.Files)
+                if (model.Photo != null)
                 {
-                    if (file != null)
-                    {
-                        string fileName = Path.GetFileName(file.FileName);
-                        string filePath = Path.Combine(serverPath, fileName);
-                        file.SaveAs(filePath);
-                        files.Add(new BinaryFile(fileName, filePath));
-                    }
+                    string fileName = Path.GetFileName(model.Photo.FileName);
+                    string filePath = Path.Combine(serverPath, fileName);
+                    model.Photo.SaveAs(filePath);
+                    files.Path = filePath;
+                    files.Name = fileName;
                 }
                 var user = userRepository.GetCurrentUser(User);
                 var note = new Resume
                 {
-                    Title = model.Title,
-                    PastPlaces = model.Text,
-                    Tags = model.Tags,
                     FIO = user,
-                    Files = files
+                    PastPlaces = model.PastPlaces,
+                    Requirments = model.Requirments,
+                    Photo = files
                 };
-                noteRepository.Save(note);
+                resumeRepository.Save(note);
                 return RedirectToAction("Index");
             }
             return View(model);
@@ -69,14 +66,14 @@ namespace NoteApp.Controllers
 
         public ActionResult Delete(long noteId)
         {
-            var note = noteRepository.Load(noteId);
-            noteRepository.Delete(note);
+            var note = resumeRepository.Load(noteId);
+            resumeRepository.Delete(note);
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(long noteId)
         {
-            var note = noteRepository.Load(noteId);
+            var note = resumeRepository.Load(noteId);
             var user = userRepository.GetCurrentUser(User);
             if (user.Equals(note.FIO))
             {
@@ -88,10 +85,10 @@ namespace NoteApp.Controllers
         public ActionResult Index(FetchOptions options)
         {
             var user = userRepository.GetCurrentUser(User);
-            var notes = noteRepository.GetAllByUser(user, options);
-            var model = new NoteListViewModel
+            var notes = resumeRepository.GetAllByUser(user, options);
+            var model = new ResumeListViewModel
             {
-                Notes = notes
+                Resumes = notes
             };
             return View(model);
         }

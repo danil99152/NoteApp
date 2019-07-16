@@ -20,7 +20,7 @@ namespace NoteApp.Models
         [Display(Name = "Прошлые места работы")]
         public virtual string PastPlaces { get; set; }
 
-        public virtual string PhotoPath { get; set; }
+        public virtual BinaryFile Photo { get; set; }
 
         [Display(Name = "Навыки")]
         public virtual string Requirments { get; set; }

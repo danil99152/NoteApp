@@ -24,5 +24,7 @@ namespace NoteApp.Models
         [Required(ErrorMessage = "Необходимо подтвердить пароль")]
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
+
+        //TODO: сделать выпадающий список для выбора роли 
     }
 }

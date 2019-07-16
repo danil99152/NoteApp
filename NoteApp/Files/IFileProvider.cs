@@ -11,8 +11,8 @@ namespace NoteApp.Files
     {
         string Name { get; }
 
-        void Save(Resume file);
+        void Save(BinaryFile file);
 
-        FileStream Load(Resume file);
+        FileStream Load(BinaryFile file);
     }
 }

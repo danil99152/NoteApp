@@ -82,7 +82,7 @@ namespace NoteApp.Controllers
                 var result = UserManager.CreateAsync(user, model.Password);
                 if (result.Result.Succeeded)
                 {
-                    UserManager.AddToRoleAsync(user.Id, "User");
+                    UserManager.AddToRoleAsync(user.Id, "User");    //TODO: настроить роли 
                     SignInManager.SignIn(user, false, false);
                     return RedirectToAction("Index", "Home");
                 }
