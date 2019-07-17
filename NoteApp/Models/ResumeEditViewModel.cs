@@ -13,6 +13,10 @@ namespace NoteApp.Models
         [Required(ErrorMessage = "Необходимо ввести Ваше имя, фамилию и отчество")]
         public string FIO { get; set; }
 
+        [Display(Name = "Ваша дата рождения")]
+        [Required(ErrorMessage = "Необходимо ввести вашу дату рождения")]
+        public virtual DateTime Birthday { get; set; }
+
         [AllowHtml]
         [Display(Name = "Ваши предыдущие места работы")]
         [DataType(DataType.MultilineText)]

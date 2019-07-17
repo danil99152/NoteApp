@@ -15,7 +15,6 @@ C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csproj.CopyComplete
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.pdb
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csprojAssemblyReference.cache
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csproj.CoreCompileInputs.cache
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.pdb
@@ -25,10 +24,6 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microso
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Web.XmlTransform.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Owin.dll
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\FluentNHibernate.xml
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Owin.xml
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\NHibernate.xml
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\bin\Debug\ru\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csproj.CopyComplete

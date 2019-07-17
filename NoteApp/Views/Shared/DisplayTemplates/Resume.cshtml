@@ -1,0 +1,15 @@
+﻿@model NoteApp.Models.Resume
+<tr>
+    <td>
+        <a href="@Url.Action("Details", new { resumeId = Model.Id })" class="resume">@Html.DisplayFor(model => model.FIO, "ResumeFIO")</a>
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Birthday)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
+    </td>
+    <td>
+        <span class="badge">@Model.Photo</span>
+    </td>
+</tr>

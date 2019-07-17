@@ -11,7 +11,7 @@ namespace NoteApp.Models
     {
         public virtual long Id { get; set; }
 
-        [Display(Name = "Автор")]
+        [Display(Name = "Ваше ФИО")]
         public virtual User FIO { get; set; }
 
         [Display(Name = "Дата рождения")]

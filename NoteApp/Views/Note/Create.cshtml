@@ -1,9 +1,9 @@
-﻿@model NoteApp.Models.NoteEditViewModel
+﻿@model NoteApp.Models.ResumeEditViewModel
 @{
     ViewBag.Title = "Новая заметка";
 }
 <h2>@ViewBag.Title</h2>
-@using (Html.BeginForm("Create", "Note", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Create", "Resume", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 

@@ -65,12 +65,14 @@
   <ItemGroup>
     <Compile Include="FetchOptions.cs" />
     <Compile Include="Listeners\ListenerAttribute.cs" />
-    <Compile Include="Listeners\PreInsertNoteEventListener.cs" />
-    <Compile Include="Listeners\PreUpdateNoteEventListener.cs" />
+    <Compile Include="Listeners\PreInsertResumeEventListener.cs" />
+    <Compile Include="Listeners\PreUpdateResumeEventListener.cs" />
     <Compile Include="Models\BinaryFile.cs" />
     <Compile Include="Models\BinaryFileMap.cs" />
     <Compile Include="Models\Resume.cs" />
     <Compile Include="Models\ResumeMap.cs" />
+    <Compile Include="Models\Vacancy.cs" />
+    <Compile Include="Models\VacancyMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BinaryFileRepository.cs" />
     <Compile Include="Repositories\ResumeRepository.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Models\RequirmentMap.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserMap.cs" />
+    <Compile Include="Repositories\VacancyRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

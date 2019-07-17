@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title My NoteApp</title>
+    <title>@ViewBag.Title My Recruitment Agency</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/summernote.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
@@ -28,11 +28,29 @@
                 @Html.Partial("_LoginPartial")
                 @if (User.IsInRole("Admin"))
                 {
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Управление пользователями", "Manage", "User")</li>
-                    <text style="color:white;">Admin</text>
-                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Управление пользователями", "Manage", "User")</li>
+                        <text style="color:white;">Admin</text>
+                    </ul>
+                }
+                @if (User.IsInRole("Candidate"))
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Создание нового резюме", "Create", "Resume")</li>
+                        <li>@Html.ActionLink("Поиск новой вакансии", "ListOfVacancies", "Vacancy")</li>
+                        <text style="color:white;">Admin</text>
+                    </ul>
+                }
+                @if (User.IsInRole("Employer"))
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Создание новой вакансии", "Create", "Vacancy")</li>
+                        <li>@Html.ActionLink("Поиск нового кандидата по резюме", "ListOfResumes", "Resume")</li>
+                        <text style="color:white;">Admin</text>
+                    </ul>
                 }
             </div>
         </div>
@@ -41,7 +59,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My NoteApp</p>
+            <p>&copy; @DateTime.Now.Year - My Recruitment Agency</p>
         </footer>
     </div>
     <script src="~/Scripts/jquery-3.3.1.js"></script>

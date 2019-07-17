@@ -15,10 +15,10 @@ namespace NoteApp.Controllers
     {
         private readonly ResumeRepository resumeRepository;
 
-        public ResumeController(ResumeRepository noteRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
+        public ResumeController(ResumeRepository resumeRepository, IFileProvider[] fileProviders ,UserRepository userRepository) : 
             base(userRepository, fileProviders)
         {
-            this.resumeRepository = noteRepository;
+            this.resumeRepository = resumeRepository;
         }
 
         public ActionResult Create()
@@ -46,14 +46,14 @@ namespace NoteApp.Controllers
                     files.Name = fileName;
                 }
                 var user = userRepository.GetCurrentUser(User);
-                var note = new Resume
+                var resume = new Resume
                 {
                     FIO = user,
                     PastPlaces = model.PastPlaces,
                     Requirments = model.Requirments,
                     Photo = files
                 };
-                resumeRepository.Save(note);
+                resumeRepository.Save(resume);
                 return RedirectToAction("Index");
             }
             return View(model);
@@ -66,18 +66,18 @@ namespace NoteApp.Controllers
 
         public ActionResult Delete(long noteId)
         {
-            var note = resumeRepository.Load(noteId);
-            resumeRepository.Delete(note);
+            var resume = resumeRepository.Load(noteId);
+            resumeRepository.Delete(resume);
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(long noteId)
         {
-            var note = resumeRepository.Load(noteId);
+            var resume = resumeRepository.Load(noteId);
             var user = userRepository.GetCurrentUser(User);
-            if (user.Equals(note.FIO))
+            if (user.Equals(resume.FIO))
             {
-                return PartialView("Details", note);
+                return PartialView("Details", resume);
             }
             return HttpNotFound();
         }
@@ -85,10 +85,10 @@ namespace NoteApp.Controllers
         public ActionResult Index(FetchOptions options)
         {
             var user = userRepository.GetCurrentUser(User);
-            var notes = resumeRepository.GetAllByUser(user, options);
+            var resumes = resumeRepository.GetAllByUser(user, options);
             var model = new ResumeListViewModel
             {
-                Resumes = notes
+                Resumes = resumes
             };
             return View(model);
         }

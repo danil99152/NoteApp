@@ -198,6 +198,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VacancyController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Files\BinaryFileModelBinder.cs" />
     <Compile Include="Files\IFileProvider.cs" />
@@ -213,11 +214,17 @@
     <Compile Include="Models\SortLinkModel.cs" />
     <Compile Include="Models\UserListViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Models\VacancyEditViewModel.cs" />
+    <Compile Include="Models\VacancyListViewModel.cs" />
     <Compile Include="Permissions\RoleManager.cs" />
     <Compile Include="Permissions\RoleStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ResumeApp.mdf" />
+    <Content Include="App_Data\ResumeApp_log.ldf">
+      <DependentUpon>ResumeApp.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-tagsinput.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -289,14 +296,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Signin.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />
-    <Content Include="Views\Note\Create.cshtml" />
-    <Content Include="Views\Note\Details.cshtml" />
-    <Content Include="Views\Note\Index.cshtml" />
+    <Content Include="Views\Resume\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Note.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\NoteTags.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\NoteText.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\NoteTitle.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Resume.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ResumeRequirment.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ResumePastPlaces.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ResumeFIO.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Role.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\User.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\UserStatus.cshtml" />
@@ -314,6 +319,15 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\Resume\Details.cshtml" />
+    <Content Include="Views\Resume\Create.cshtml" />
+    <Content Include="Views\Vacancy\Create.cshtml" />
+    <Content Include="Views\Vacancy\Delete.cshtml" />
+    <Content Include="Views\Vacancy\Details.cshtml" />
+    <Content Include="Views\Vacancy\Index.cshtml" />
+    <Content Include="Views\Resume\Delete.cshtml" />
+    <Content Include="Views\Resume\ListOfResumes.cshtml" />
+    <Content Include="Views\Vacancy\ListOfVacancies.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -338,9 +352,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

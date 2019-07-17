@@ -16,7 +16,7 @@ namespace NoteApp.Models
             Map(n => n.Birthday);
             Map(n => n.PastPlaces).Length(int.MaxValue);
             Map(n => n.Requirments);
-            Map(n => n.Photo);
+            References(n => n.Photo).Column("BinaryFile_id");
         }
     }
 }
