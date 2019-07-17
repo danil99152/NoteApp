@@ -27,11 +27,6 @@ namespace NoteApp.Models.Listeners
             if (@event.Entity is Resume note)
             {
                 note.Birthday = DateTime.Now;
-                note.ChangeDate = DateTime.Now;
-            }
-            else if (@event.Entity is User user)
-            {
-                user.RegistrationDate = DateTime.Now;
             }
             return false;
         }

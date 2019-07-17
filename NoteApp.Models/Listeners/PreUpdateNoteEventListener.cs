@@ -24,9 +24,9 @@ namespace NoteApp.Models.Listeners
 
         private bool SetProps(PreUpdateEvent @event)
         {
-            if (@event.Entity is Resume note)
+            if (@event.Entity is Resume resume)
             {
-                note.ChangeDate = DateTime.Now;
+                resume.Birthday = DateTime.Now;
             }
             return false;
         }

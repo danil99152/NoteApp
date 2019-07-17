@@ -25,6 +25,10 @@ namespace NoteApp.Models
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "Вы кандидат или работодатель")]
+        [Required(ErrorMessage = "Необходимо выбрать одно значение")]
+        public Role Role { get; set; }
+
         //TODO: сделать выпадающий список для выбора роли 
     }
 }
