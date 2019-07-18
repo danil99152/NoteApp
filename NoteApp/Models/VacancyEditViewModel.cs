@@ -26,15 +26,16 @@ namespace NoteApp.Models
 
         [Display(Name = "Требования к кандидату")]
         [Required(ErrorMessage = "Потеряли")]
-        public virtual ICollection<Requirment> Requirments { get; set; }
+        public virtual string Requirments { get; set; }
 
         [Display(Name = "Зарплата")]
         [Required(ErrorMessage = "За бесплатно никто работать не будет!")]
         public virtual int Salary { get; set; }
-
+        /*
         public VacancyEditViewModel()
         {
             Requirments = new List<Requirment>();
         }
+        */
     }
 }

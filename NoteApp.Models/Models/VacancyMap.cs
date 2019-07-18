@@ -16,7 +16,8 @@ namespace NoteApp.Models.Models
             Map(v => v.Description).Length(4001);
             Map(v => v.Time);
             Map(v => v.Company);
-            References(v => v.Requirments).Column("Requirment_id");
+            //  References(v => v.Requirments).Column("Requirment_id");
+            Map(v => v.Requirments);
             Map(v => v.Salary);
         }
     }

@@ -24,16 +24,17 @@ namespace NoteApp.Models.Models
         public virtual string Company { get; set; }
 
         [Display(Name = "Требования к кандидату")]
-        public virtual ICollection<Requirment> Requirments { get; set; }
+        public virtual string Requirments { get; set; }
 
         [Display(Name = "Зарплата")]
         public virtual int Salary { get; set; }
 
+        /*
         public Vacancy()
         {
             Requirments = new List<Requirment>();
         }
-
+        */
 
     }
 }
