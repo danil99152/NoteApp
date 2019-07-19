@@ -48,41 +48,44 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\Autofac.dll</HintPath>
+      <HintPath>..\libs\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\Autofac.Integration.Mvc.dll</HintPath>
+      <HintPath>..\libs\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Owin">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\packages\Autofac.Owin.4.2.0\lib\net45\Autofac.Integration.Owin.dll</HintPath>
+      <HintPath>..\libs\Autofac.Integration.Owin.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\FluentNHibernate.dll</HintPath>
+      <HintPath>..\libs\FluentNHibernate.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate.Cfg.Db.CsharpSqlite">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\FluentNHibernate.Cfg.Db.CsharpSqlite.dll</HintPath>
+      <HintPath>..\libs\FluentNHibernate.Cfg.Db.CsharpSqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\libs\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp.Models\bin\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <HintPath>..\libs\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <HintPath>..\libs\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <HintPath>..\libs\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <HintPath>..\libs\Microsoft.Owin.Security.Cookies.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
-      <HintPath>..\..\..\..\..\Desktop\NoteApp\NoteApp\bin\NHibernate.dll</HintPath>
+      <HintPath>..\libs\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -344,15 +347,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NoteApp.Models\NoteApp.Models.csproj">
-      <Project>{04317748-7DCA-4B7D-BCF4-FD906F1C1030}</Project>
+      <Project>{04317748-7dca-4b7d-bcf4-fd906f1c1030}</Project>
       <Name>NoteApp.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

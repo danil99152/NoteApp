@@ -115,10 +115,6 @@ C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp\obj\De
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp\obj\Debug\NoteApp.dll
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp\obj\Debug\NoteApp.pdb
 C:\Users\Данил\Documents\Visual Studio 2017\projects\NoteApp\NoteApp\bin\Microsoft.Owin.xml
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.csprojAssemblyReference.cache
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.csproj.CoreCompileInputs.cache
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.dll
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.pdb
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\ApplicationInsights.config
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\NoteApp.dll.config
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\NoteApp.dll
@@ -170,6 +166,12 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\roslyn\vbc.rsp
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\roslyn\VBCSCompiler.exe
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Antlr3.Runtime.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Autofac.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Autofac.Integration.Mvc.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Autofac.Integration.Owin.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\FluentNHibernate.Cfg.Db.CsharpSqlite.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\FluentNHibernate.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Iesi.Collections.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -177,12 +179,17 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.ServerT
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.Web.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.Owin.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.Owin.Security.Cookies.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.Owin.Security.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Newtonsoft.Json.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\NHibernate.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\NoteApp.Models.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\Owin.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\System.Diagnostics.DiagnosticSource.dll
@@ -219,4 +226,8 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\ru\System.Web.Razor.
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\ru\System.Web.WebPages.resources.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.csprojAssemblyReference.cache
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.csproj.CoreCompileInputs.cache
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.csproj.CopyComplete
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp\obj\Debug\NoteApp.pdb
