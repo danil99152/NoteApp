@@ -20,13 +20,14 @@ namespace NoteApp.Controllers
         {
             this.vacancyRepository = vacancyRepository;
         }
-
+        [Authorize(Roles = "Employer")]
         public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Employer")]
         public ActionResult Create(VacancyEditViewModel model)
         {
             if (ModelState.IsValid)
@@ -47,11 +48,7 @@ namespace NoteApp.Controllers
             return View(model);
         }
 
-        public FileResult Download(string filePath, string fileName)
-        {
-            return File(filePath, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
-        }
-
+        [Authorize(Roles = "Employer")]
         public ActionResult Delete(long vacancyId)
         {
             var vacancy = vacancyRepository.Load(vacancyId);

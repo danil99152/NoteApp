@@ -11,7 +11,7 @@ namespace NoteApp.Models
         [Display(Name = "Имя пользователя")]
         [Required(ErrorMessage = "Необходимо указать имя пользователя")]
         [StringLength(32)]
-        public string Login { get; set; }
+        public string UserName { get; set; }
 
         [Display(Name = "Пароль")]
         [DataType(DataType.Password)]
@@ -25,10 +25,8 @@ namespace NoteApp.Models
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
 
-        [Display(Name = "Вы кандидат или работодатель")]
-        [Required(ErrorMessage = "Необходимо выбрать одно значение")]
-        public Role Role { get; set; }
+        [Display(Name = "Вы кандидат или работодатель")]  
+        public string Role { get; set; }
 
-        //TODO: сделать выпадающий список для выбора роли 
     }
 }

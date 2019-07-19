@@ -78,11 +78,11 @@ namespace NoteApp.Controllers
         {
             if (ModelState.IsValid && !User.Identity.IsAuthenticated)
             {
-                var user = new User(model.Login);
+                var user = new User(model.UserName);
                 var result = UserManager.CreateAsync(user, model.Password);
                 if (result.Result.Succeeded)
                 {
-                    UserManager.AddToRoleAsync(user.Id, model.Role.Name);
+                    UserManager.AddToRoleAsync(user.Id, model.Role);
                     SignInManager.SignIn(user, false, false);
                     return RedirectToAction("Index", "Home");
                 }

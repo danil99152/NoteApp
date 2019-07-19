@@ -195,6 +195,7 @@
     <Compile Include="Auth\IdentityStore.cs" />
     <Compile Include="Auth\SignInManager.cs" />
     <Compile Include="Auth\UserManager.cs" />
+    <Compile Include="BaseGenerator\Generator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BinaryFileController.cs" />
@@ -206,6 +207,8 @@
     <Compile Include="Files\BinaryFileModelBinder.cs" />
     <Compile Include="Files\IFileProvider.cs" />
     <Compile Include="Files\StreamHelper.cs" />
+    <Compile Include="GeneratorProviders\GeneratorProvider.cs" />
+    <Compile Include="GeneratorProviders\GeneratorProviderFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

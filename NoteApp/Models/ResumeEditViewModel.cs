@@ -9,10 +9,6 @@ namespace NoteApp.Models
 {
     public class ResumeEditViewModel
     {
-        [Display(Name = "Ваше фио")]
-        [Required(ErrorMessage = "Необходимо ввести Ваше имя, фамилию и отчество")]
-        public string FIO { get; set; }
-
         [Display(Name = "Ваша дата рождения")]
         [Required(ErrorMessage = "Необходимо ввести вашу дату рождения")]
         public virtual DateTime Birthday { get; set; }

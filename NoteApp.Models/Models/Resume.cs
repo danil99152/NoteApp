@@ -9,7 +9,7 @@ namespace NoteApp.Models
 {
     public class Resume
     {
-        public virtual long Id { get; set; }
+        public virtual Guid Id { get; set; }
 
         [Display(Name = "Ваше ФИО")]
         public virtual User FIO { get; set; }
@@ -24,8 +24,5 @@ namespace NoteApp.Models
 
         [Display(Name = "Навыки")]
         public virtual string Requirments { get; set; }
-
-        [Display(Name = "В каком формате вы хотите файл")]
-        public virtual string Type { get; set; }
     }
 }

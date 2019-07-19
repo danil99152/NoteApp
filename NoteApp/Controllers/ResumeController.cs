@@ -21,11 +21,12 @@ namespace NoteApp.Controllers
             this.resumeRepository = resumeRepository;
         }
 
+        [Authorize(Roles = "Candidate")]
         public ActionResult Create()
         {
             return View();
         }
-
+        [Authorize(Roles = "Candidate")]
         [HttpPost]
         public ActionResult Create(ResumeEditViewModel model)
         {
@@ -48,7 +49,9 @@ namespace NoteApp.Controllers
                 var user = userRepository.GetCurrentUser(User);
                 var resume = new Resume
                 {
+                    Id = Guid.NewGuid(),
                     FIO = user,
+                    Birthday = model.Birthday,
                     PastPlaces = model.PastPlaces,
                     Requirments = model.Requirments,
                     Photo = files
@@ -64,6 +67,7 @@ namespace NoteApp.Controllers
             return File(filePath, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
 
+        [Authorize(Roles = "Candidate")]
         public ActionResult Delete(long noteId)
         {
             var resume = resumeRepository.Load(noteId);

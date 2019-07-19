@@ -11,7 +11,7 @@ namespace NoteApp.Models
     {
         public ResumeMap()
         {
-            Id(n => n.Id).GeneratedBy.Identity();
+            Id(n => n.Id);
             References(n => n.FIO).Column("User_id");
             Map(n => n.Birthday);
             Map(n => n.PastPlaces).Length(int.MaxValue);
