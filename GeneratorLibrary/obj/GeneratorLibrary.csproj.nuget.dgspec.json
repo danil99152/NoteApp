@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\GeneratorLibrary\\GeneratorLibrary.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\GeneratorLibrary\\GeneratorLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\GeneratorLibrary\\GeneratorLibrary.csproj",
+        "projectName": "GeneratorLibrary",
+        "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\GeneratorLibrary\\GeneratorLibrary.csproj",
+        "packagesPath": "C:\\Users\\DanilKomyshev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\GeneratorLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DanilKomyshev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj": {
+                "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj"
+              },
+              "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp\\NoteApp.csproj": {
+                "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp\\NoteApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj",
+        "projectName": "NoteApp.Models",
+        "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp\\NoteApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp\\NoteApp.csproj",
+        "projectName": "NoteApp",
+        "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp\\NoteApp.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj": {
+                "projectPath": "C:\\Users\\DanilKomyshev\\Documents\\GitHub\\NoteApp\\NoteApp.Models\\NoteApp.Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

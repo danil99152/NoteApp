@@ -11,12 +11,12 @@ namespace NoteApp.Models
     {
         public ResumeMap()
         {
-            Id(n => n.Id);
-            References(n => n.FIO).Column("User_id");
-            Map(n => n.Birthday);
-            Map(n => n.PastPlaces).Length(int.MaxValue);
-            Map(n => n.Requirments);
-            References(n => n.Photo).Column("BinaryFile_id");
+            Id(r => r.Id).GeneratedBy.Assigned().Not.Nullable();
+            References(r => r.FIO).Column("User_id");
+            Map(r => r.Birthday);
+            Map(r => r.PastPlaces).Length(int.MaxValue);
+            Map(r => r.Requirments);
+            References(r => r.Photo).Column("BinaryFile_id");
         }
     }
 }

@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
+using NoteApp.BaseGenerator;
 using NoteApp.Files;
 using NoteApp.Models;
 using NoteApp.Models.Repositories;
@@ -49,7 +53,6 @@ namespace NoteApp.Controllers
                 var user = userRepository.GetCurrentUser(User);
                 var resume = new Resume
                 {
-                    Id = Guid.NewGuid(),
                     FIO = user,
                     Birthday = model.Birthday,
                     PastPlaces = model.PastPlaces,
@@ -68,16 +71,43 @@ namespace NoteApp.Controllers
         }
 
         [Authorize(Roles = "Candidate")]
-        public ActionResult Delete(long noteId)
+        public ActionResult Delete(long resumeId)
         {
-            var resume = resumeRepository.Load(noteId);
+            var resume = resumeRepository.Load(resumeId);
             resumeRepository.Delete(resume);
             return RedirectToAction("Index");
         }
-
-        public ActionResult Details(long noteId)
+        [HttpGet]
+        public ActionResult Details(long resumeId)
         {
-            var resume = resumeRepository.Load(noteId);
+            var types = new List<SelectListItem>();
+
+            Type generatorType = typeof(Generator);
+            var assembliesUri = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
+            string localPath = new Uri(assembliesUri).LocalPath;
+            foreach (string file in Directory.EnumerateFiles(localPath, "*.dll"))
+            {
+                var member = Assembly.LoadFile(file).GetTypes().Where(type => type.BaseType.FullName == generatorType.FullName);
+
+                foreach (var item in member)
+                {
+                    ConstructorInfo ci = item.GetConstructor(new Type[] { });
+                    var Obj = ci.Invoke(new object[] { }) as Generator;
+                    if (Obj.Name != null && item.FullName != null)
+                    {
+                        var selItem = new SelectListItem()
+                        {
+                            Text = Obj.Name,
+                            Value = item.FullName
+                        };
+
+                        types.Add(selItem);
+                    }
+
+                }
+                ViewBag.List = types;
+            }
+            var resume = resumeRepository.Load(resumeId);
             var user = userRepository.GetCurrentUser(User);
             if (user.Equals(resume.FIO))
             {
@@ -85,11 +115,26 @@ namespace NoteApp.Controllers
             }
             return HttpNotFound();
         }
+        [HttpPost]
+        public ActionResult Details(Resume resume, Generator generator)
+        {
+            var fileUri = ConfigurationManager.AppSettings["uri"];
+            var fileName = Guid.NewGuid() + $".{generator.Name}";
+            string file = "";
+            if (resume != null)
+            {
+                file = generator.Generate(resume, fileUri, fileName);
+            }
+            using (WebClient client = new WebClient())
+            {
+                client.DownloadData(file);
+            }
+            return RedirectToAction("Index");
+        }
 
         public ActionResult Index(FetchOptions options)
         {
-            var user = userRepository.GetCurrentUser(User);
-            var resumes = resumeRepository.GetAllByUser(user, options);
+            var resumes = resumeRepository.GetAllResumes(options);
             var model = new ResumeListViewModel
             {
                 Resumes = resumes

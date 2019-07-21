@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NoteApp.Models\NoteApp.Models.csproj" />
+    <ProjectReference Include="..\NoteApp\NoteApp.csproj" />
+  </ItemGroup>
+
+</Project>

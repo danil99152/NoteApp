@@ -16,9 +16,9 @@ namespace NoteApp.Models.Repositories
         {
         }
 
-        public IList<Resume> GetAllByUser(User user, FetchOptions options = null)
+        public IList<Resume> GetAllResumes(FetchOptions options = null)
         {
-            var crit = session.CreateCriteria<Resume>().Add(Restrictions.Eq("FIO", user));
+            var crit = session.CreateCriteria<Resume>();
             if (options != null)
             {
                 SetFetchOptions(crit, options);

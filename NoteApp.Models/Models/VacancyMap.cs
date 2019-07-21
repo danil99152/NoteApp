@@ -13,6 +13,7 @@ namespace NoteApp.Models.Models
         {
             Id(v => v.Id).GeneratedBy.Identity();
             Map(v => v.Name).Length(30);
+            References(v => v.Author).Column("User_Id");
             Map(v => v.Description).Length(4001);
             Map(v => v.Time);
             Map(v => v.Company);

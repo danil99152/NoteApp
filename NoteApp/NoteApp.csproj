@@ -332,8 +332,6 @@
     <Content Include="Views\Vacancy\Details.cshtml" />
     <Content Include="Views\Vacancy\Index.cshtml" />
     <Content Include="Views\Resume\Delete.cshtml" />
-    <Content Include="Views\Resume\ListOfResumes.cshtml" />
-    <Content Include="Views\Vacancy\ListOfVacancies.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

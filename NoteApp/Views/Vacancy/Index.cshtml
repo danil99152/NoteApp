@@ -1,7 +1,7 @@
 ﻿@using NoteApp.Extensions
 @model NoteApp.Models.VacancyListViewModel
 @{
-    ViewBag.Title = "Мои вакансии";
+    ViewBag.Title = "Вакансии";
 }
 <h2 style="display:inline-block; margin-bottom:0px">@ViewBag.Title</h2>
 @using (Html.BeginForm("Index", "Vacancy", FormMethod.Get, new { @class = "form-inline pull-right", style = "margin-top:20px" }))
@@ -32,9 +32,12 @@ else
 {
     <p class="text-center">Вакансий нет</p>
 }
+@if (User.IsInRole("Employer"))
+{
 <div class="container">
     <a href="@Url.Action("Create")" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Новая вакансия</a>
 </div>
+}
 <div id="modDialog" class="modal fade" role="dialog">
     <div id="dialogContent" class="modal-dialog"></div>
 </div>

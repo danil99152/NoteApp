@@ -10,7 +10,7 @@ namespace NoteApp.BaseGenerator
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public virtual string Generate(User person, string fileUri, string fileName)
+        public virtual string Generate(Resume person, string fileUri, string fileName)
         {
             return null;
         }

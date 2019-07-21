@@ -16,9 +16,9 @@ namespace NoteApp.Models.Repositories
         {
         }
 
-        public IList<Vacancy> GetAllByUser(User user, FetchOptions options = null)
+        public IList<Vacancy> GetAllVacancies(FetchOptions options = null)
         {
-            var crit = session.CreateCriteria<Vacancy>().Add(Restrictions.Eq("FIO", user));
+            var crit = session.CreateCriteria<Vacancy>();
             if (options != null)
             {
                 SetFetchOptions(crit, options);

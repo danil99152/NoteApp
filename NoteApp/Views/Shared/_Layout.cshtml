@@ -31,23 +31,21 @@
                         <text style="color:white;">Admin</text>
                     </ul>
                 }
-                @if (User.IsInRole("Candidate"))
+                else if (User.IsInRole("Candidate"))
                 {
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Создание нового резюме", "Create", "Resume")</li>
-                        <li>@Html.ActionLink("Поиск новой вакансии", "ListOfVacancies", "Vacancy")</li>
-                        <text style="color:white;">Admin</text>
-                    </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Создание нового резюме", "Create", "Resume")</li>
+                <li>@Html.ActionLink("Список резюме", "Index", "Resume")</li>
+                <li>@Html.ActionLink("Поиск новой вакансии", "Index", "Vacancy")</li>
+            </ul>
                 }
-                @if (User.IsInRole("Employer"))
+                else if (User.IsInRole("Employer"))
                 {
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Создание новой вакансии", "Create", "Vacancy")</li>
-                        <li>@Html.ActionLink("Поиск нового кандидата по резюме", "ListOfResumes", "Resume")</li>
-                        <text style="color:white;">Admin</text>
-                    </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Создание новой вакансии", "Create", "Vacancy")</li>
+                <li>@Html.ActionLink("Список вакансий", "Index", "Vacancy")</li>
+                <li>@Html.ActionLink("Поиск нового кандидата по резюме", "Index", "Resume")</li>
+            </ul>
                 }
             </div>
         </div>

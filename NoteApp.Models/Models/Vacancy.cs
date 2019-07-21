@@ -14,6 +14,8 @@ namespace NoteApp.Models.Models
         [Display(Name = "Название вакансии")]
         public virtual string Name { get; set; }
 
+        public virtual User Author { get; set; }
+
         [Display(Name = "Описание вакансии")]
         public virtual string Description { get; set; }
 

@@ -31,11 +31,6 @@ namespace NoteApp.Models
         [Display(Name = "Зарплата")]
         [Required(ErrorMessage = "За бесплатно никто работать не будет!")]
         public virtual int Salary { get; set; }
-        /*
-        public VacancyEditViewModel()
-        {
-            Requirments = new List<Requirment>();
-        }
-        */
+
     }
 }

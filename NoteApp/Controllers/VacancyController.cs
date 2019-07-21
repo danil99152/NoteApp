@@ -32,10 +32,11 @@ namespace NoteApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                var user = userRepository.GetCurrentUser(User);
                 var vacancy = new Vacancy
                 {
                     Name = model.Name,
+                    Author = user,
                     Description = model.Description,
                     Time = model.Time,
                     Company = model.Company,
@@ -64,8 +65,7 @@ namespace NoteApp.Controllers
 
         public ActionResult Index(FetchOptions options)
         {
-            var user = userRepository.GetCurrentUser(User);
-            var vacancies = vacancyRepository.GetAllByUser(user, options);
+            var vacancies = vacancyRepository.GetAllVacancies(options);
             var model = new VacancyListViewModel
             {
                 Vacancies = vacancies
