@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity.Owin;
 using NoteApp.Files;
 using NoteApp.Models;
+using NoteApp.Models.Models;
 using NoteApp.Models.Repositories;
+using System.Web.Mvc;
 
 namespace NoteApp.Controllers
 {

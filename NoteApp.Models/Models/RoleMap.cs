@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class RoleMap : ClassMap<Role>
     {

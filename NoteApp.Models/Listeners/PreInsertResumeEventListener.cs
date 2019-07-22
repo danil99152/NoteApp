@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using NHibernate.Event;
+using NoteApp.Models.Models;
 using NoteApp.Models.Repositories;
 
 namespace NoteApp.Models.Listeners
@@ -24,7 +25,7 @@ namespace NoteApp.Models.Listeners
 
         private bool SetCreationProps(PreInsertEvent @event)
         {
-            if (@event.Entity is Resume note)
+            if (@event.Entity is Resume candidate)
             {
                 return true;
             }

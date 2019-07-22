@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class Role : IRole<long>
     {

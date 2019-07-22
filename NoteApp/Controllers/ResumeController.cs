@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using NoteApp.BaseGenerator;
 using NoteApp.Files;
 using NoteApp.Models;
+using NoteApp.Models.Models;
 using NoteApp.Models.Repositories;
 
 namespace NoteApp.Controllers
@@ -50,10 +51,9 @@ namespace NoteApp.Controllers
                     files.Path = filePath;
                     files.Name = fileName;
                 }
-                var user = userRepository.GetCurrentUser(User);
                 var resume = new Resume
                 {
-                    FIO = user,
+                    FIO = model.FIO,
                     Birthday = model.Birthday,
                     PastPlaces = model.PastPlaces,
                     Requirments = model.Requirments,
@@ -108,12 +108,7 @@ namespace NoteApp.Controllers
                 ViewBag.List = types;
             }
             var resume = resumeRepository.Load(resumeId);
-            var user = userRepository.GetCurrentUser(User);
-            if (user.Equals(resume.FIO))
-            {
-                return PartialView("Details", resume);
-            }
-            return HttpNotFound();
+            return PartialView("Details", resume);
         }
         [HttpPost]
         public ActionResult Details(Resume resume, Generator generator)

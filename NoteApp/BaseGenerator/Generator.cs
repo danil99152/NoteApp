@@ -1,4 +1,5 @@
 ﻿using NoteApp.Models;
+using NoteApp.Models.Models;
 
 namespace NoteApp.BaseGenerator
 {

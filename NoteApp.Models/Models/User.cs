@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class User : IUser<long>
     {
@@ -19,15 +19,11 @@ namespace NoteApp.Models
 
         public virtual ICollection<Role> Roles { get; set; }
 
-        [Display(Name = "Заметки")]
-        public virtual ICollection<Resume> Resumes { get; set; }
-
         public virtual bool IsEnabled { get; set; } = true;
 
         public User()
         {
             Roles = new List<Role>();
-            Resumes = new List<Resume>();
         }
 
         public User(string userName) : this()

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using NoteApp.Models.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace NoteApp.Models
 {

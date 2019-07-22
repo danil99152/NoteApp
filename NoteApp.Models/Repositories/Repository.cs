@@ -29,6 +29,7 @@ namespace NoteApp.Models.Repositories
             {
                 session.SaveOrUpdate(entity);
                 tr.Commit();
+                session.Flush();
             }
         }
 
@@ -60,7 +61,7 @@ namespace NoteApp.Models.Repositories
             }
             if (!string.IsNullOrEmpty(options.SearchQuery))
             {
-                crit.Add(Restrictions.Like("Title", options.SearchQuery, MatchMode.Anywhere));
+                crit.Add(Restrictions.Like("Requirments", options.SearchQuery, MatchMode.Anywhere));
             }
         }
 

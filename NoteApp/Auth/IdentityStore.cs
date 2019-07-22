@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using Microsoft.AspNet.Identity;
 using NHibernate;
-using NoteApp.Models;
+using NoteApp.Models.Models;
 
 namespace NoteApp.Auth
 {

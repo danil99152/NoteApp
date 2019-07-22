@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using NoteApp.Models;
+using NoteApp.Models.Models;
+using System;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 using System.Web.UI.WebControls;
-using NoteApp.Models;
 
 namespace NoteApp.Extensions
 {

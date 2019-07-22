@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using NHibernate;
 using NHibernate.Criterion;
+using NoteApp.Models.Models;
 
 namespace NoteApp.Models.Repositories
 {

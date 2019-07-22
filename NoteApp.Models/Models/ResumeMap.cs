@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class ResumeMap : ClassMap<Resume>
     {
         public ResumeMap()
         {
-            Id(r => r.Id).GeneratedBy.Assigned().Not.Nullable();
-            References(r => r.FIO).Column("User_id");
+            Id(r => r.Id).GeneratedBy.Identity();
+            Map(r => r.FIO);
             Map(r => r.Birthday);
             Map(r => r.PastPlaces).Length(int.MaxValue);
             Map(r => r.Requirments);
-            References(r => r.Photo).Column("BinaryFile_id");
+            HasOne(r => r.Photo).Cascade.All().Constrained();
         }
     }
 }

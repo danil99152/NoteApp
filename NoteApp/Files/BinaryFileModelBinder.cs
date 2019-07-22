@@ -1,7 +1,4 @@
-﻿using NoteApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using NoteApp.Models.Models;
 using System.Web;
 using System.Web.Mvc;
 

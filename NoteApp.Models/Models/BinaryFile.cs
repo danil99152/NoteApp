@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NoteApp.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class BinaryFile
     {
@@ -14,7 +15,7 @@ namespace NoteApp.Models
 
         public virtual string Path { get; set; }
 
-        public virtual Resume Resume { get; set; }
+        public virtual Resume Candidate{ get; set; }
 
         public virtual string ContentType { get; set; }
 

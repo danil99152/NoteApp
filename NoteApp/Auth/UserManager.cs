@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Microsoft.AspNet.Identity;
-using NoteApp.Models;
+﻿using Microsoft.AspNet.Identity;
+using NoteApp.Models.Models;
 
 namespace NoteApp.Auth
 {

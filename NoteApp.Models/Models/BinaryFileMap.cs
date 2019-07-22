@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class BinaryFileMap : ClassMap<BinaryFile>
     {
@@ -15,7 +15,7 @@ namespace NoteApp.Models
             Map(f => f.Name).Length(100);
             Map(f => f.Path).Length(255);
             Map(f => f.ContentType);
-            References(f => f.Resume).Column("Resume_id");
+            HasOne(f => f.Candidate);
         }
     }
 }

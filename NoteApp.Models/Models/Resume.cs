@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NoteApp.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace NoteApp.Models
         public virtual long Id { get; set; }
 
         [Display(Name = "Ваше ФИО")]
-        public virtual User FIO { get; set; }
+        public virtual string FIO { get; set; }
 
         [Display(Name = "Дата рождения")]
         public virtual DateTime Birthday { get; set; }
@@ -25,6 +26,6 @@ namespace NoteApp.Models
         [Display(Name = "Навыки")]
         public virtual string Requirments { get; set; }
 
-        public string Type { get; set; }
+        public virtual string Type { get; set; }
     }
 }

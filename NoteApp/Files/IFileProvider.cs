@@ -1,9 +1,5 @@
-﻿using NoteApp.Models;
-using System;
-using System.Collections.Generic;
+﻿using NoteApp.Models.Models;
 using System.IO;
-using System.Linq;
-using System.Web;
 
 namespace NoteApp.Files
 {

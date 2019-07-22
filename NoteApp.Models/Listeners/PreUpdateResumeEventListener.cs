@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using NHibernate.Event;
+using NoteApp.Models.Models;
 using NoteApp.Models.Repositories;
 
 namespace NoteApp.Models.Listeners
@@ -24,10 +25,10 @@ namespace NoteApp.Models.Listeners
 
         private bool SetProps(PreUpdateEvent @event)
         {
-            if (@event.Entity is Resume resume)
-            {
-                return true;
-            }
+            //if (@event.Entity is Resume candidate)
+            //{
+            //    return true;
+            //}
             return false;
         }
     }

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Reflection;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.Mvc;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
@@ -21,11 +13,17 @@ using NHibernate.Tool.hbm2ddl;
 using NoteApp.App_Start;
 using NoteApp.Auth;
 using NoteApp.Controllers;
-using NoteApp.Models;
 using NoteApp.Models.Listeners;
+using NoteApp.Models.Models;
 using NoteApp.Models.Repositories;
 using NoteApp.Permission;
 using Owin;
+using System;
+using System.Configuration;
+using System.Linq;
+using System.Reflection;
+using System.Web.Mvc;
+using System.Web.Routing;
 
 [assembly: OwinStartup(typeof(Startup))]
 namespace NoteApp.App_Start
@@ -71,8 +69,8 @@ namespace NoteApp.App_Start
                     .ExposeConfiguration(c =>
                     {
                         SchemaMetadataUpdater.QuoteTableAndColumns(c);
-                        c.EventListeners.PreInsertEventListeners = x.Resolve<IPreInsertEventListener[]>();
-                        c.EventListeners.PreUpdateEventListeners = x.Resolve<IPreUpdateEventListener[]>();
+                       // c.EventListeners.PreInsertEventListeners = x.Resolve<IPreInsertEventListener[]>();
+                       // c.EventListeners.PreUpdateEventListeners = x.Resolve<IPreUpdateEventListener[]>();
                     })
                     .CurrentSessionContext("call");
                 var conf = cfg.BuildConfiguration();

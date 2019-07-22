@@ -24,7 +24,10 @@
             </tr>
         </thead>
         <tbody>
-            @Html.DisplayFor(model => model.Vacancies)
+            @foreach (var item in Model.Vacancies)
+            {
+                @Html.DisplayFor(model => item)
+            }
         </tbody>
     </table>
 }

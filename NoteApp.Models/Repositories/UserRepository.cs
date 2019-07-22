@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate;
 using System.Web;
+using NoteApp.Models.Models;
 
 namespace NoteApp.Models.Repositories
 {

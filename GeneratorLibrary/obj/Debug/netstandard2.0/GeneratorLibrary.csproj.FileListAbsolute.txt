@@ -4,9 +4,9 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netst
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\GeneratorLibrary.pdb
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\NoteApp.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\NoteApp.Models.dll
+C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\NHibernate.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\FluentNHibernate.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\Microsoft.AspNet.Identity.Core.dll
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\NHibernate.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\Microsoft.Owin.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\System.Web.Optimization.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\GeneratorLibrary\bin\Debug\netstandard2.0\System.Web.Mvc.dll

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
 
-namespace NoteApp.Models
+namespace NoteApp.Models.Models
 {
     public class UserMap : ClassMap<User>
     {
@@ -14,7 +14,6 @@ namespace NoteApp.Models
             Id(u => u.Id).GeneratedBy.Identity();
             Map(u => u.UserName).Length(30);
             Map(u => u.Password).Column("PasswordHash");
-            HasMany(u => u.Resumes).KeyColumn("User_id");
             HasManyToMany(u => u.Roles)
                 .ParentKeyColumn("User_id")
                 .ChildKeyColumn("Role_id");

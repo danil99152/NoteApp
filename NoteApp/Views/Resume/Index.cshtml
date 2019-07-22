@@ -24,7 +24,10 @@
             </tr>
         </thead>
         <tbody>
-            @Html.DisplayFor(model => model.Resumes)
+            @foreach (var item in Model.Resumes)
+            {
+                @Html.DisplayFor(model => item)
+            }
         </tbody>
     </table>
 }
@@ -34,16 +37,16 @@ else
 }
 @if (User.IsInRole("Candidate"))
 {
-<div class="container">
-    <a href="@Url.Action("Create")" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Новое резюме</a>
-</div>
+    <div class="container">
+        <a href="@Url.Action("Create")" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Новое резюме</a>
+    </div>
 }
 <div id="modDialog" class="modal fade" role="dialog">
     <div id="dialogContent" class="modal-dialog"></div>
 </div>
 @section scripts {
     <script type="text/javascript">
-    $(function () {
+        $(function () {
             $.ajaxSetup({ cache: false });
             $(".resume").click(function (e) {
                 e.preventDefault();
