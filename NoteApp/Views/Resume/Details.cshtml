@@ -1,54 +1,33 @@
 ﻿@model NoteApp.Models.Resume
-
-@{
-    ViewBag.Title = "Details";
-    var list = ViewBag.List as IEnumerable<SelectListItem>;
-}
-
-<h2>Details</h2>
-
-<div>
-    <h4>Resume</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Birthday)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Birthday)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PastPlaces)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PastPlaces)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Requirments)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Requirments)
-        </dd>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Type", list)
-            </div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">@Model.FIO</h4>
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Загрузить" class="btn btn-default" />
+        <div class="modal-body">
+            <div class="panel-body">
+                @Html.DisplayFor(model => model.Birthday)
             </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @Html.DisplayFor(model => model.PastPlaces, "ResumePastPlaces")
+                </div>
+            </div>
+            @if (Model.Photo.Path != null && Model.Photo.Name != null)
+            {
+            <ul class="list-group">
+                <tr>
+                    <a href="@Url.Action("Download", new { filePath = Model.Photo.Path, fileName = Model.Photo.Name })" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-cloud-download"> Скачать</span></a>
+                </tr>
+            </ul>
+            }
+            @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
         </div>
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        <div class="modal-footer">
+            @if (User.IsInRole("Candidate"))
+            {
+                <a href="@Url.Action("Delete", new { resumeId = Model.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Удалить</a>
+            }
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        </div>
+    </div>

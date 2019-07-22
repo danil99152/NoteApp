@@ -1,0 +1,15 @@
+﻿@model NoteApp.Models.Models.Vacancy
+    <tr>
+        <td>
+            <a href="@Url.Action("Details", new { vacancyId = Model.Id })" class="resume">@Html.DisplayFor(model => model.Name, "VacancyName")</a>
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Company)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
+        </td>
+    </tr>

@@ -1,58 +1,28 @@
 ﻿@model NoteApp.Models.Models.Vacancy
-
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
-
-<div>
-    <h4>Vacancy</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Time)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Time)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Company)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Company)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Salary)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Salary)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">@Model.Name</h4>
+        </div>
+        <div class="modal-body">
+            <div class="panel-body">
+                @Html.DisplayFor(model => model.Salary)
+            </div>
+            <div class="panel-body">
+                @Html.DisplayFor(model => model.Time)
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @Html.DisplayFor(model => model.Description)
+                </div>
+            </div>
+            @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
+        </div>
+        <div class="modal-footer">
+            @if (User.IsInRole("Employer"))
+            {
+                <a href="@Url.Action("Delete", new { vacancyId = Model.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Удалить</a>
+            }
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>

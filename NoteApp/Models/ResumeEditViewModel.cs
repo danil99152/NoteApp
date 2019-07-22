@@ -29,7 +29,7 @@ namespace NoteApp.Models
 
         [DataType(DataType.Upload)]
         [Display(Name = "Добавить фото")]
-        public HttpPostedFileBase Photo { get; set; }
+        public HttpPostedFileBase Files { get; set; }
 
     }
 }
