@@ -15,4 +15,3 @@ C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csproj.CopyComplete
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.dll
 C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.pdb
-C:\Users\DanilKomyshev\Documents\GitHub\NoteApp\NoteApp.Models\obj\Debug\NoteApp.Models.csprojAssemblyReference.cache

@@ -59,12 +59,14 @@ namespace NoteApp.Controllers
                     files.Path = filePath;
                     files.Name = fileName;
                 }
+                var user = userRepository.GetCurrentUser(User);
                 var resume = new Resume
                 {
                     FIO = model.FIO,
                     Birthday = model.Birthday,
                     PastPlaces = model.PastPlaces,
                     Requirments = model.Requirments,
+                    Author = user,
                     Photo = files
                 };
                 resumeRepository.Save(resume);
@@ -92,8 +94,12 @@ namespace NoteApp.Controllers
         public ActionResult Delete(long resumeId)
         {
             var resume = resumeRepository.Load(resumeId);
-            resumeRepository.Delete(resume);
-            return RedirectToAction("Index");
+            if (User.Identity.Name.Equals(resume.Author.UserName))
+            {
+                resumeRepository.Delete(resume);
+                return RedirectToAction("Index");
+            }
+            return HttpNotFound();
         }
         //[HttpGet]
         //public ActionResult Details(long resumeId)
@@ -149,6 +155,16 @@ namespace NoteApp.Controllers
         {
             var resume = resumeRepository.Load(resumeId);
             return PartialView("Details", resume);
+        }
+
+        public ActionResult Edit(long resumeId)
+        {
+            var resume = resumeRepository.Load(resumeId);
+            if (User.Identity.Name.Equals(resume.Author.UserName))
+            {
+                return PartialView("Edit", resume);
+            }
+            return HttpNotFound();
         }
 
         public ActionResult Index(FetchOptions options)

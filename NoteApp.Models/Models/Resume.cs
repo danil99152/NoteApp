@@ -27,5 +27,7 @@ namespace NoteApp.Models
         public virtual string Requirments { get; set; }
 
         public virtual string Type { get; set; }
+
+        public virtual User Author { get; set; }
     }
 }

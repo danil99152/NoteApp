@@ -17,6 +17,7 @@ namespace NoteApp.Models.Models
             Map(r => r.PastPlaces).Length(int.MaxValue);
             Map(r => r.Requirments);
             HasOne(r => r.Photo).Cascade.All().Constrained();
+            References(r => r.Author).Column("User_Id");
         }
     }
 }

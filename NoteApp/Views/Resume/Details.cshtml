@@ -29,10 +29,11 @@
             @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
         </div>
         <div class="modal-footer">
-            @if (User.IsInRole("Candidate"))
+            @if (User.IsInRole("Candidate") && (User.Identity.Name.Equals(Model.Author.UserName)))
             {
+                <a href="@Url.Action("Edit", new { resumeId = Model.Id })" class="btn btn-default">Изменить</a>
                 <a href="@Url.Action("Delete", new { resumeId = Model.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Удалить</a>
-            }
+}
             <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-        </div>
+</div>
     </div>
