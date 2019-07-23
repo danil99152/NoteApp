@@ -15,11 +15,16 @@
             </div>
             @if (Model.Photo.Path != null && Model.Photo.Name != null)
             {
-            <ul class="list-group">
                 <tr>
-                    <a href="@Url.Action("Download", new { filePath = Model.Photo.Path, fileName = Model.Photo.Name })" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-cloud-download"> Скачать</span></a>
+                    <style>
+                        .round {
+                            border-radius: 100px;
+                            border: 2px solid gray;
+                            box-shadow: 0 0 5px #666;
+                        }
+                    </style>
+                    <a href="@Url.Action("Download", new { filePath = Model.Photo.Path, fileName = Model.Photo.Name })" class="btn btn-xs btn-default"><img src="@Path.Combine($"/Uploaded Files/{ User.Identity.Name}/{ Model.Photo.Name}")" width="90" height="90" alt="image" class="round" /></a>
                 </tr>
-            </ul>
             }
             @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
         </div>

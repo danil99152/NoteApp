@@ -10,7 +10,7 @@
         @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
     </td>
     <td>
-        @if (Model.Photo != null)
+        @if (Model.Photo.Path != null && Model.Photo.Name != null)
         {
             <style>
                 .round {
@@ -20,7 +20,7 @@
                 }
             </style>
             <div class="result">
-                <img src="@Path.Combine($"/Uploaded Files/{ User.Identity.Name}/{ Model.Photo.Name}")" width="90" height="90" alt="image" class="round"/>
+                <img src="@Path.Combine($"/Uploaded Files/{ User.Identity.Name}/{ Model.Photo.Name}")" width="90" height="90" alt="image" class="round" />
             </div>
         }
 
