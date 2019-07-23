@@ -27,9 +27,5 @@ namespace NoteApp.Models
         [StringLength(255, ErrorMessage = "Содержимое навыков слишком большое")]
         public string Requirments { get; set; }
 
-        [DataType(DataType.Upload)]
-        [Display(Name = "Добавить фото")]
-        public HttpPostedFileBase Files { get; set; }
-
     }
 }

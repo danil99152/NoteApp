@@ -288,6 +288,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Uploaded Files\Candidate\1558590825-9982 %281%29.jpg" />
+    <Content Include="Uploaded Files\Candidate\1558590825-9982.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

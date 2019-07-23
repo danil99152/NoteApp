@@ -10,6 +10,19 @@
         @Html.DisplayFor(model => model.Requirments, "ResumeRequirment")
     </td>
     <td>
-        <span class="badge">@Model.Photo</span>
+        @if (Model.Photo != null)
+        {
+            <style>
+                .round {
+                    border-radius: 100px;
+                    border: 2px solid gray;
+                    box-shadow: 0 0 5px #666;
+                }
+            </style>
+            <div class="result">
+                <img src="@Path.Combine($"/Uploaded Files/{ User.Identity.Name}/{ Model.Photo.Name}")" width="90" height="90" alt="image" class="round"/>
+            </div>
+        }
+
     </td>
 </tr>
